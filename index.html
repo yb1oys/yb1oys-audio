@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lagu YB1OYS</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lagu Amatir Radio YB1OYS</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f0f0f0;
+      background: #f7f7f7;
       text-align: center;
       padding: 50px;
     }
@@ -16,38 +16,25 @@
       padding: 30px;
       border-radius: 10px;
       display: inline-block;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
-      cursor: pointer;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
     h1 {
       color: #333;
     }
-    p {
-      font-size: 1.1em;
-      color: #666;
+    audio {
+      margin-top: 20px;
+      width: 100%;
     }
   </style>
 </head>
 <body>
-  <div class="container" onclick="playAudio()">
+  <div class="container">
     <h1>🎙️ Lagu Amatir Radio YB1OYS</h1>
-    <p>Klik di mana saja pada kotak ini untuk memutar lagu secara berulang.</p>
+    <p>Hobi Radio Amatir, Semangat Berkarya!</p>
+    <audio controls>
+      <source src="yb1oys.mp3" type="audio/mpeg">
+      Browser Anda tidak mendukung pemutar audio.
+    </audio>
   </div>
-
-  <audio id="player" loop>
-    <source src="yb1oys.mp3" type="audio/mpeg">
-    Browser Anda tidak mendukung audio.
-  </audio>
-
-  <script>
-    function playAudio() {
-      const audio = document.getElementById("player");
-      audio.play().then(() => {
-        document.querySelector(".container p").textContent = "🎵 Lagu sedang diputar berulang...";
-      }).catch(err => {
-        document.querySelector(".container p").textContent = "❗ Gagal memutar lagu: " + err.message;
-      });
-    }
-  </script>
 </body>
 </html>
